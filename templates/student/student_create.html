@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Create</title>
+</head>
+<body>
+    <h1>Student Create</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="first_name">First Name</label><br>
+        <input type="text" name="first_name" id="first_name"><br>
+        <label for="last_name">Last Name</label><br>
+        <input type="text" name="last_name" id="last_name"><br>
+        <label for="age">Age</label><br>
+        <input type="number" name="age" id="age"><br>
+         <label for="email">Email</label><br>
+        <input type="email" name="email" id="email"><br><br>
+        <button type="submit">Create Student</button>
+    </form>
+    <br>
+    <button><a href="{% url 'students:list' %}">Back to student list</a></button>
+    <br>
+    <br>
+    <button><a href="{% url 'home' %}">Back to home</a></button>
+</body>
+</html>
